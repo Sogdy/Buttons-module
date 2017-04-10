@@ -1,0 +1,11 @@
+// Mixins
+
+@mixin text($color, $font_family, $font_size, $font_weight) {
+  color: $color;
+  font-family: $font_family;
+  font-size: $font_size;
+  font-weight: $font_weight;
+}
+
+
+

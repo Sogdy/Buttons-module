@@ -1,0 +1,260 @@
+// Buttons styles begin
+
+.button {
+	border-radius: 4px;
+	display: block;
+	@include text (#fff, $primary-font, 14px, 400);
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	min-width: 100px;
+	padding: 9px 18px;
+	margin: 10px 0;
+	transition: background, color, 0.4s;
+	background: #f5f5f5;
+	background: linear-gradient(to bottom, #fefefe 0%,#f5f5f5 100%);
+	border: 1px solid #ccc;
+	color: #666;
+	&_inverted {
+		@extend .button;
+	}
+	&:not(.button_disabled):hover,
+	&:not(.button_disabled):active, 
+	&_inverted,
+ 	&:not(.button_disabled):hover:before, 
+ 	&:not(.button_disabled):hover:after  {
+		background: #fff;
+		color: #666;
+	}
+	&_inverted:not(.button_disabled):hover,
+	&_inverted:not(.button_disabled):active {
+		color: #666;
+		background: #f5f5f5;
+		background: linear-gradient(to bottom, #fefefe 0%,#f5f5f5 100%);
+	}
+}
+.button_brand {
+	@extend .button;
+	background: $primary-color;
+	border-color: $primary-color;
+	color: #fff;
+	&_inverted {
+		@extend .button_brand;
+	}
+	&:not(.button_disabled):hover,
+	&:not(.button_disabled):active,
+	&_inverted,
+ 	&:not(.button_disabled):hover:before, 
+ 	&:not(.button_disabled):hover:after  {
+		background: #fff;
+		color: $primary-color;
+	}
+	&_inverted:not(.button_disabled):hover,
+	&_inverted:not(.button_disabled):active {
+		color: #fff;
+		background: $primary-color;
+	}
+}
+ .button_success {
+	@extend .button;
+ 	background: $secondary-color;
+ 	border-color: $secondary-color;
+ 	color: #fff;
+ 	&_inverted {
+ 		@extend .button_success;
+	}
+	&:not(.button_disabled):hover,
+	&:not(.button_disabled):active, 
+ 	&_inverted,
+ 	&:not(.button_disabled):hover:before, 
+ 	&:not(.button_disabled):hover:after {
+ 		color: $secondary-color;
+ 	}
+ 	&:not(.button_disabled):hover, 
+ 	&_inverted {
+ 		background: #fff;
+ 	}
+ 	&_inverted:not(.button_disabled):hover,
+ 	&_inverted:not(.button_disabled):active {
+ 		color: #fff;
+ 		background: $secondary-color;
+ 	}
+ }
+.button_warning {
+	@extend .button;
+	background: $third-color;
+	border-color: $third-color;
+	color: #fff;
+	&_inverted {
+		@extend .button_warning;
+	} 
+	&:not(.button_disabled):hover,
+	&:not(.button_disabled):active,
+	&_inverted,
+ 	&:not(.button_disabled):hover:before, 
+ 	&:not(.button_disabled):hover:after  {
+		background: #fff;
+		color: $third-color;
+	}
+	&_inverted:not(.button_disabled):hover,
+	&_inverted:not(.button_disabled):active {
+		color: #fff;
+		background: $third-color;
+	}
+}
+.button_danger {
+	@extend .button;
+	background: $forth-color;
+	border-color: $forth-color;	
+	color: #fff;
+	&_inverted {
+		@extend .button_danger;
+	}
+	&:not(.button_disabled):hover,
+	&:not(.button_disabled):active,
+	&_inverted,
+ 	&:not(.button_disabled):hover:before, 
+ 	&:not(.button_disabled):hover:after  {
+		background: #fff;
+		color: $forth-color;	
+	}
+	&_inverted:not(.button_disabled):hover,
+	&_inverted:not(.button_disabled):active {
+		color: #fff;
+		background: $forth-color;
+	}
+}
+.button_disabled {
+	position: relative;
+	cursor: initial;
+	&:before {
+		background: #fff;
+		width: 105%;
+		height: 110%;
+		content: "";
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		opacity: 0.6;
+	}
+}
+ .button_short {
+ 	min-width: initial;
+ }
+.button_unpadded {
+	padding-right: 0;
+	padding-left: 0;
+}
+.button_full-width {
+	display: block;
+	width: 100%;
+}
+.button_size-l {
+	min-width: 150px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	&.button_icon {
+		padding: 0;
+		width: 48px;
+		height: 48px;
+	}
+}
+.button_size-s {
+	min-width: 80px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	&.button_icon {
+		padding: 0;
+		width: 36px;
+		height: 36px;
+	}
+}
+.button_size-xs {
+	min-width: 70px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	&.button_icon {
+		padding: 0;
+		width: 30px;
+		height: 30px;
+	}
+}
+.button_icon-l,
+.button_icon-r {
+	position: relative;
+}
+.button_icon-l:before,
+.button_icon-r:after {
+	@include text (#fff, $secondary-font, 16px, 400);
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: transparent; 
+	transition: background, color, 0.4s;
+}
+.button:not(.button_disabled),
+.button_brand:not(.button_disabled),
+.button_success:not(.button_disabled),
+.button_warning:not(.button_disabled),
+.button_danger:not(.button_disabled) {
+
+	&.button_icon-l:hover:before,
+	&.button_icon-r:hover:after {
+		background: transparent;
+	} 
+}
+.button_icon-r {
+	padding-right: 38px;
+	&:after {
+		content: "\f059";
+		right: 16px;
+	}
+}
+.button_icon-l {
+	padding-left: 38px;
+	&:before {
+		content: "\f05a";
+		left: 16px;
+	}
+}
+.button_icon-both {
+	@extend .button_icon-l;
+	@extend .button_icon-r;
+}
+
+.button_icon {
+	min-width: initial;
+	padding: 0;
+	width: 42px;
+	height: 42px;
+	line-height: 1.3;	
+	@extend .button_icon-l;
+	&:before {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.button_text.button_text.button_text {
+	background: transparent;
+	border: none;
+	padding: 0;
+	color: inherit;
+	cursor: default;
+	min-width: initial;
+	&:hover {
+		background: transparent;
+		color: inherit;
+	}
+}
+.button_link.button_link.button_link {
+	@extend .button_text;
+	text-decoration: underline;
+	color: $primary-color;
+	cursor: pointer;
+	&:hover {
+		background: transparent;
+		color: $primary-color;
+	}
+}
+// Buttons styles end

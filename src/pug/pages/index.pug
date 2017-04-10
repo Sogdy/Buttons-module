@@ -1,0 +1,83 @@
+extends ../layout
+
+block content
+	// Section begin
+
+	section.colors
+		h3 Colors & States
+		.colors__wrap
+			.colors__block
+				button(class="button") Brand
+				button(class="button") ,
+				button(class="button button_disabled") Disabled
+				button(class="button_inverted") Inverted
+				button(class="button_inverted button_disabled") Inv Dis
+				button(class="button_inverted") ,
+			.colors__block
+				button(class="button_brand") Brand
+				button(class="button_brand") ,
+				button(class="button_brand button_disabled") Disabled
+				button(class="button_brand_inverted") Inverted
+				button(class="button_brand_inverted button_disabled") Inv Dis
+				button(class="button_brand_inverted") ,
+			.colors__block
+				button(class="button_success") Brand
+				button(class="button_success") ,
+				button(class="button_success button_disabled") Disabled
+				button(class="button_success_inverted") Inverted
+				button(class="button_success_inverted button_disabled") Inv Dis
+				button(class="button_success_inverted") ,
+			.colors__block
+				button(class="button_warning") Brand
+				button(class="button_warning") ,
+				button(class="button_warning button_disabled") Disabled
+				button(class="button_warning_inverted") Inverted
+				button(class="button_warning_inverted button_disabled") Inv Dis
+				button(class="button_warning_inverted") ,
+			.colors__block
+				button(class="button_danger") Brand
+				button(class="button_danger") ,
+				button(class="button_danger button_disabled") Disabled
+				button(class="button_danger_inverted") Inverted
+				button(class="button_danger_inverted button_disabled") Inv Dis
+				button(class="button_danger_inverted") ,
+		
+	// Section end
+
+	section.sizes
+		h3 Sizes & Icons
+		.sizes__wrap
+			.sizes__block
+				button(class="button_brand button_size-l") L Button
+				button(class="button_brand button_size-l button_icon-l") Icon L
+				button(class="button_brand button_size-l button_icon-r") Icon R
+				button(class="button_brand button_size-l button_icon-both") Icons both
+				button(class="button_brand button_size-l button_icon")
+			.sizes__block
+				button(class="button_brand") L Button
+				button(class="button_brand button_icon-l") Icon L
+				button(class="button_brand button_icon-r") Icon R
+				button(class="button_brand button_icon-both") Icons both
+				button(class="button_brand button_icon")
+			.sizes__block
+				button(class="button_brand button_size-s") L Button
+				button(class="button_brand button_size-s button_icon-l") Icon L
+				button(class="button_brand button_size-s button_icon-r") Icon R
+				button(class="button_brand button_size-s button_icon-both") Icons both
+				button(class="button_brand button_size-s button_icon")
+			.sizes__block
+				button(class="button_brand button_size-xs") L Button
+				button(class="button_brand button_size-xs button_icon-l") Icon L
+				button(class="button_brand button_size-xs button_icon-r") Icon R
+				button(class="button_brand button_size-xs button_icon-both") Icons both
+				button(class="button_brand button_size-xs button_icon")
+	
+	section.other
+		h3 Other modifiers
+		button(class="button_brand button_disabled") Short
+		button(class="button_brand") Short
+		button(class="button_brand button_short") Short
+		button(class="button_brand button_unpadded") Long padded for unpadded
+		button(class="button_brand button_full-width") Short
+		button(class="button button_text") Text
+		button(class="button button_link") Link

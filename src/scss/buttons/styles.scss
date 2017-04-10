@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixins";
+@import "buttons";
+
+@font-face {
+	font-family: 'Font Awesome';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../../fonts/fontawesome-webfont.woff) format('woff');
+	unicode-range: U+0-10FFFF;
+}
+
+// General styles begin
+body {
+  @include text (#000, $primary-font, 14px, 400);
+  background-color: #fff;
+  line-height: 21px;
+}
+p {
+  @include text (#000, $primary-font, 14px, 400);
+}
+section {
+	width: 770px;
+	padding: 96px 40px;
+	margin: 0 auto;
+}
+.colors__wrap,
+.sizes__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// General styles end
+
